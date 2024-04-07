@@ -17,29 +17,32 @@ function Header() {
                     </div>
                     <div className="col-lg-6 text-center text-lg-right">
                         <div className="d-inline-flex align-items-center">
-                            <div className="btn-group">
-                                <button type="button" className="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>
+                            <div className="btn-group ">
+                                <button type="button" className="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown" >Login</button>
                                 <div className="dropdown-menu dropdown-menu-right">
-                                    <button className="dropdown-item" type="button">Sign in</button>
-                                    <button className="dropdown-item" type="button">Sign up</button>
+                                    <Link to='/login' className="dropdown-item" type="button">Login</Link>
+                                    <Link to='/registration' className="dropdown-item" type="button">Registration</Link>
+                                    <Link to='/profile' className="dropdown-item" type="button">My Profile</Link>
+
                                 </div>
                             </div>
-                            <div className="btn-group mx-2">
+
+                            {/* <div className="btn-group mx-2">
                                 <button type="button" className="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">USD</button>
                                 <div className="dropdown-menu dropdown-menu-right">
                                     <button className="dropdown-item" type="button">EUR</button>
                                     <button className="dropdown-item" type="button">GBP</button>
                                     <button className="dropdown-item" type="button">CAD</button>
                                 </div>
-                            </div>
-                            <div className="btn-group">
+                            </div> */}
+                            {/* <div className="btn-group">
                                 <button type="button" className="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">EN</button>
                                 <div className="dropdown-menu dropdown-menu-right">
                                     <button className="dropdown-item" type="button">FR</button>
                                     <button className="dropdown-item" type="button">AR</button>
                                     <button className="dropdown-item" type="button">RU</button>
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                         <div className="d-inline-flex align-items-center d-block d-lg-none">
                             <Link to="/" className="btn px-0 ml-2">

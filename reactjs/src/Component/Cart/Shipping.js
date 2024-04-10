@@ -12,6 +12,7 @@ function Shipping() {
     const navigate = useNavigate()
     const { shippingInfo } = useSelector(state => state.cart)
     console.log(shippingInfo)
+    const [name, setname] = useState(shippingInfo.name)
     const [address, setAddress] = useState(shippingInfo.address)
     const [city, setcity] = useState(shippingInfo.city)
     const [postalcode, setPostalCode] = useState(shippingInfo.postalcode)
@@ -20,7 +21,7 @@ function Shipping() {
 
     const submitHandler = (e) => {
         e.preventDefault()
-        dispatch(saveShippingInfo({address,city,postalcode,phoneNo,country}))
+        dispatch(saveShippingInfo({name,address,city,postalcode,phoneNo,country}))
         navigate('/order/confirm')
 
     }
@@ -33,6 +34,18 @@ function Shipping() {
                 <div class="col-10 col-lg-5">
                     <form class="shadow-lg" onSubmit={submitHandler}>
                         <h1 class="mb-4">Shipping Info</h1>
+                        <div class="form-group">
+                            <label >Name</label>
+                            <input
+                                type="text"
+                                id="name_field "
+                                class="form-control"
+                                value={name}
+                                onChange={(e) => setname(e.target.value)}
+                                required
+                            />
+                        </div>
+
                         <div class="form-group">
                             <label >Address</label>
                             <input

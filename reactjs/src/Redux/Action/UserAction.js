@@ -15,7 +15,8 @@ import axios from "axios";
 export const createUser = (formData) => async (dispatch) => {
     try {
         dispatch({ type: REGISTER_USER_REQUEST })
-        let link = `http://localhost:4000/api/userinsert`
+        let link ='https://apiecommerce-qpji.onrender.com/api/userinsert'
+        // let link = `http://localhost:4000/api/userinsert`
         const { data } = await axios.post(link, formData)
         console.log(data);
         dispatch({
@@ -35,7 +36,8 @@ export const createUser = (formData) => async (dispatch) => {
 export const userLogin = (email, password) => async (dispatch) => {
     try {
         dispatch({ type: LOGIN_REQUEST })
-        let link = `http://localhost:4000/api/verifylogin`
+        let link ='https://apiecommerce-qpji.onrender.com/api/verifylogin'
+        // let link = `http://localhost:4000/api/verifylogin`
         const { data } = await axios.post(link, { email, password })
         console.log(data);
         dispatch({

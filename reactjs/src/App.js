@@ -13,6 +13,9 @@ import Profile from "./Component/User/Profile";
 import Shipping from "./Component/Cart/Shipping";
 import ConfirmOrder from "./Component/Cart/ConfirmOrder.";
 import Payment from "./Component/Payment/Payment";
+import Checkout from "./Component/Checkout";
+import Contact from "./Component/Contact";
+
 
 function App() {
   return (
@@ -22,6 +25,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop />} />
         <Route path="/shopdetails" element={<ShopDetails />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/registration" element={<Registration />} />

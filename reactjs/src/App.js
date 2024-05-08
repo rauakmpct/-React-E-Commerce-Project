@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Component/Home";
 import Header from "./Component/layoutes/Header";
@@ -15,9 +15,27 @@ import ConfirmOrder from "./Component/Cart/ConfirmOrder.";
 import Payment from "./Component/Payment/Payment";
 import Checkout from "./Component/Checkout";
 import Contact from "./Component/Contact";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+
+
+  
 
 
 function App() {
+  // const dispatch = useDispatch()
+
+  // const [stripeApiKey, setStripeApiKey] = useState("");
+
+  // async function getStripeApiKey() {
+  //   const { data } = await axios.get("/api/stripeapiKey");
+  //   setStripeApiKey(data.stripeApiKey);
+  // }
+  // console.log(setStripeApiKey)
+  // useEffect(()=>{
+  //   dispatch(loadUser())
+  //   getStripeApiKey()
+  // },[dispatch])
   return (
     <>
       <Header />
